@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
 
     /**
@@ -8,9 +10,19 @@ public class Main {
      * zip(myArray1, myArray2) → {1,3,5,7,9,2,4,6,8,10,12,14,16}
      */
     public static int[] combine(int[] array1, int[] array2) {
+        int a = array1.length;
+        int b = array2.length;
+        int[] c;
+        c = new int[a+b];
+        for(int i=0;i<array1.length;i++){
+            c[i] = array1[i];
 
-        return null;
-
+        }
+        for(int i=0;i<array2.length;i++){
+            int i1 = array1.length + i;
+            c[i1] = array2[i];
+        }
+        return c;
     }
 
     /**
@@ -21,9 +33,12 @@ public class Main {
      * zip(myArray1, myArray2) → {1,2,3,4,5,6,7,8,9,10}
      */
     public static int[] zip(int[] array1, int[] array2) {
-
-        return null;
-
+        int[] c = new int[array1.length + array2.length];
+        for(int i = 0; i < array1.length; i++){
+            c[i*2] = array1[i];
+            c[i*2+1] = array2[i];
+        }
+        return c;
     }
 
     /**
@@ -56,8 +71,16 @@ public class Main {
      * capitalCount(words) → {1, 2, 2, 0}
      */
     public static int[] capitalCount(String[] words) {
+        int[] count;
+        for(int i=0; i<words.length; i++){
+            char c[] = words[i].toCharArray();
+            for(char d = c[i];;){
+                if(Character.isUpperCase(d)){
+                    
+                }
+            }
+        }
 
-        return null;
 
     }
 
